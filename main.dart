@@ -1,22 +1,22 @@
-// main.dart
 import 'package:flutter/material.dart';
-import 'attendance_screen.dart'; // Import AttendanceScreen
+import 'location_screen.dart'; // Import the location screen
+import 'route_details_screen.dart'; // Import the route details screen
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key); // Add 'key' parameter
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Location Screen App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const AttendanceScreen(), // Set AttendanceScreen as the home screen
+      debugShowCheckedModeBanner: false,
+      title: 'Attendance App',
+      // Use the initial Route as LocationScreen
+      home: LocationScreen(),
+      routes: {
+        '/routeDetails': (context) => RouteDetailsScreen(), // Add RouteDetailsScreen
+      },
     );
   }
 }
