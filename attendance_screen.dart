@@ -3,7 +3,7 @@ import 'location_screen.dart';
 import 'route_screen.dart';
 
 class AttendanceScreen extends StatelessWidget {
-  // Sample list of members (you can replace this with your actual data)
+  
   final List<String> members = ['Member 1', 'Member 2', 'Member 3'];
 
   @override
@@ -18,7 +18,7 @@ class AttendanceScreen extends StatelessWidget {
             trailing: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // Icon to show current location
+                
                 IconButton(
                   icon: Icon(Icons.location_on),
                   onPressed: () {
